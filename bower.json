@@ -12,9 +12,5 @@
     "banner"
   ],
   "license": "MIT",
-  "main": [
-    "__config.scss",
-    "__core.scss",
-    "_tipi.component.big-banner.scss"
-  ]
+  "main": "_tipi.component.big-banner.scss"
 }
