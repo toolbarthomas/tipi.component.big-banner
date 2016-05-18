@@ -1,0 +1,20 @@
+{
+  "name": "tipi.component.big-banner",
+  "homepage": "https://github.com/toolbarthomas/tipi.component.big-banner",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Banner component for tipi",
+  "keywords": [
+    "toolbarthomas",
+    "modular",
+    "tipi",
+    "banner"
+  ],
+  "license": "MIT",
+  "main": [
+    "__config.scss",
+    "__core.scss",
+    "_tipi.component.big-banner.scss"
+  ]
+}
