@@ -1,7 +1,6 @@
 @mixin core_big-banner {
 	.big-banner {
 		position: relative;
-		overflow: hidden;
 	}
 
 	.big-banner-align {
@@ -87,6 +86,7 @@
 		background-size: cover;
 		background-position: center top;
 		background-repeat: no-repeat;
+		overflow: hidden;
 
 		> img {
 			visibility: hidden;
