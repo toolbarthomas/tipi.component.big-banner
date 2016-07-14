@@ -9,15 +9,24 @@
 		height: 100%;
 		table-layout: fixed;
 		@include clear(false, true);
+	}
+
+	.big-banner-align-push {
+		float: left;
+		margin-right: -1px;
+		width: 1px;
+		visibility: hidden;
+		position: relative;
+		overflow: hidden;
+
+		@if $big-banner-max-height != false {
+			max-height: $big-banner-max-height;
+		}
 
 		&:before {
 			display: block;
 			content: " ";
-			float: left;
-			margin-right: -1px;
-			width: 1px;
 			min-height: $big-banner-min-height;
-			visibility: hidden;
 		}
 	}
 
@@ -57,6 +66,14 @@
 		height: 100%;
 		width: 100%;
 		vertical-align: middle;
+
+		.big-banner--top & {
+			vertical-align: top;
+		}
+
+		.big-banner--bottom & {
+			vertical-align: bottom;
+		}
 	}
 
 	.big-banner-body-align {
@@ -68,6 +85,10 @@
 	}
 
 	.big-banner-footer-align {
+		.big-banner-fields > .big-banner-body + .big-banner-footer > & {
+			padding-top: $big-banner-vertical-gutter / 2;
+		}
+
 		padding-bottom: $big-banner-vertical-gutter;
 	}
 
