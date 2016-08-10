@@ -3,15 +3,15 @@
 		position: relative;
 	}
 
-	.big-banner-align {
+	.big-banner-content {
 		display: table;
 		width: 100%;
 		height: 100%;
 		table-layout: fixed;
-		@include clear(false, true);
+		position: relative;
 	}
 
-	.big-banner-align-push {
+	.big-banner-content-push {
 		float: left;
 		margin-right: -1px;
 		width: 1px;
@@ -30,16 +30,14 @@
 		}
 	}
 
-	.big-banner-align-content {
+	.big-banner-content-align {
 		display: table-cell;
 		width: 100%;
 		height: 100%;
 		vertical-align: top;
-		position: relative;
-		z-index: 1;
 	}
 
-	.big-banner-fields {
+	.big-banner-content-align-body {
 		display: table;
 		width: 100%;
 		height: 100%;
@@ -48,6 +46,7 @@
 
 	.big-banner-body,
 	.big-banner-footer {
+		position: relative;
 		display: table-row;
 		width: 100%;
 	}
@@ -66,44 +65,36 @@
 		height: 100%;
 		width: 100%;
 		vertical-align: middle;
-
-		.big-banner--top & {
-			vertical-align: top;
-		}
-
-		.big-banner--bottom & {
-			vertical-align: bottom;
-		}
 	}
 
 	.big-banner-body-align {
-		padding-top: $big-banner-vertical-gutter;
+		padding: $big-banner-body-gutter 0 $big-banner-footer-gutter;
 
-		.big-banner-fields > .big-banner-body:only-child > & {
-			padding-bottom: $big-banner-vertical-gutter;
+		&:only-child {
+			padding-bottom: $big-banner-body-gutter;
 		}
 	}
 
 	.big-banner-footer-align {
-		.big-banner-fields > .big-banner-body + .big-banner-footer > & {
-			padding-top: $big-banner-vertical-gutter / 2;
-		}
-
-		padding-bottom: $big-banner-vertical-gutter;
+		padding: $big-banner-footer-gutter 0;
 	}
 
 	.big-banner-wrapper {
 		margin: 0 auto;
-		max-width: $big-banner-wrapper-width;
-		padding: 0 $big-banner-horizontal-gutter;
+		max-width: $big-banner-wrapper-max-width;
+		padding: 0 $big-banner-wrapper-gutter;
 	}
 
+	.big-banner-stage,
 	.big-banner-image {
 		position: absolute;
 		top: 0;
+		left: 0;
 		right: 0;
 		bottom: 0;
-		left: 0;
+	}
+
+	.big-banner-image {
 		background-size: cover;
 		background-position: center top;
 		background-repeat: no-repeat;

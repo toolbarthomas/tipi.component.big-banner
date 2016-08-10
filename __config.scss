@@ -1,7 +1,9 @@
 $big-banner-min-height: 50vh !default;
 $big-banner-max-height: false !default;
 
-$big-banner-wrapper-width: $tablet-landscape-min-width !default;
+$big-banner-body-gutter: 40px !default;
 
-$big-banner-vertical-gutter: 40px !default;
-$big-banner-horizontal-gutter: 20px !default;
+$big-banner-footer-gutter: 20px !default;
+
+$big-banner-wrapper-gutter: 20px !default;
+$big-banner-wrapper-max-width: $tablet-landscape-min-width !default;
