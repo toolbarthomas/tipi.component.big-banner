@@ -32,7 +32,7 @@
 	}
 
 	.big-banner-main-content {
-		vertical-align: middle;
+		vertical-align: $big-banner-vertical-align;
 	}
 
 	.big-banner-main-content-sections {
@@ -58,7 +58,7 @@
 		vertical-align: top;
 
 		.big-banner-main-content-body & {
-			vertical-align: middle;
+			vertical-align: $big-banner-vertical-align;
 		}
 	}
 
